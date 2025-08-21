@@ -185,3 +185,6 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# macos
+.DS_Store
+
