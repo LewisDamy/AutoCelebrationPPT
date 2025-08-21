@@ -23,7 +23,7 @@ def main():
     # TODO
 
     # Step 3: Generate PowerPoint
-    create_ppt(docx, output_file)
+    create_ppt(docx, f"samples/{output_file}")
 
     print(f"Presentation created: {output_file}")
 
