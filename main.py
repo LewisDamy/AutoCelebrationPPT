@@ -2,6 +2,7 @@ import sys
 import os
 from parsers.docx_parser import parse_docx
 from generator.ppt_generator import create_ppt
+from processor.structure import process_text
 
 
 def main():
@@ -17,10 +18,10 @@ def main():
         sys.exit(1)
 
     # Step 1: Parse input
-    docx = parse_docx(input_file)
+    text = parse_docx(input_file)
 
     # Step 2: Process text (detect structure)
-    # TODO
+    structured_data = process_text(text)
 
     # Step 3: Generate PowerPoint
     create_ppt(docx, output_file)
