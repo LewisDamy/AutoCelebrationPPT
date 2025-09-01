@@ -1,19 +1,11 @@
 from helpers.json import read_json
+from helpers.text import tokenize
 
 OPEN_QUOTE = "\u201C"  # “
 CLOSE_QUOTE = "\u201D"  # ”
 STRAIGHT_QUOTE = "\""  # "
 
 MATCHES = []
-
-
-def tokenize(text: str) -> list[str]:
-    """
-    Splits text into tokens by spaces and newlines,
-    keeping quotes/numbers attached unless separated by whitespace/newline.
-    """
-    # Replace newlines with spaces, then split on spaces
-    return text.replace("\n", " ").split()
 
 
 def is_valid_chapter_versicle(text: str) -> bool:
